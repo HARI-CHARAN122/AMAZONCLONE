@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Clone</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Arial:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-belt">
+            <div class="header-logo">
+                <a href="#">
+                    <img src="https://picsum.photos/120/50" alt="Amazon Logo" class="logo">
+                </a>
+            </div>
+
+            <div class="header-delivery">
+                <div class="delivery-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="delivery-address">
+                    <span class="nav-line-1">Deliver to</span>
+                    <span class="nav-line-2">Select your address</span>
+                </div>
+            </div>
+
+            <div class="header-search">
+                <div class="search-category">
+                    <select>
+                        <option>All</option>
+                        <option>Arts & Crafts</option>
+                        <option>Automotive</option>
+                        <option>Books</option>
+                        <option>Electronics</option>
+                        <!-- More categories -->
+                    </select>
+                </div>
+                <input type="text" class="search-input">
+                <button class="search-button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+
+            <div class="header-language">
+                <img src="https://picsum.photos/20/14" alt="Flag" class="flag-icon">
+                <select class="language-select">
+                    <option>EN</option>
+                    <option>ES</option>
+                    <option>FR</option>
+                </select>
+            </div>
+
+            <div class="header-nav">
+                <div class="nav-item" id="nav-account">
+                    <span class="nav-line-1">Hello, sign in</span>
+                    <span class="nav-line-2">Account & Lists
+                        <i class="fas fa-caret-down"></i>
+                    </span>
+                    <div class="account-dropdown">
+                        <div class="dropdown-content">
+                            <div class="sign-in">
+                                <button>Sign in</button>
+                                <p>New customer? <a href="#">Start here</a></p>
+                            </div>
+                            <div class="lists-section">
+                                <div class="list-column">
+                                    <h3>Your Lists</h3>
+                                    <ul>
+                                        <li><a href="#">Create a List</a></li>
+                                        <li><a href="#">Find a List</a></li>
+                                        <li><a href="#">AmazonSmile Charity Lists</a></li>
+                                    </ul>
+                                </div>
+                                <div class="account-column">
+                                    <h3>Your Account</h3>
+                                    <ul>
+                                        <li><a href="#">Account</a></li>
+                                        <li><a href="#">Orders</a></li>
+                                        <li><a href="#">Recommendations</a></li>
+                                        <li><a href="#">Browsing History</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nav-item" id="nav-orders">
+                    <span class="nav-line-1">Returns</span>
+                    <span class="nav-line-2">& Orders</span>
+                </div>
+
+                <div class="nav-item" id="nav-cart">
+                    <span class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </span>
+                    <span class="nav-line-2">Cart</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-left">
+            <div class="nav-hamburger">
+                <i class="fas fa-bars"></i>
+                All
+            </div>
+            <div class="nav-links">
+                <a href="#">Today's Deals</a>
+                <a href="#">Customer Service</a>
+                <a href="#">Registry</a>
+                <a href="#">Gift Cards</a>
+                <a href="#">Sell</a>
+                <a href="#" class="nav-deal">Shop deals in Electronics</a>
+            </div>
+        </div>
+        <div class="nav-right">
+            <a href="#" class="nav-prime">Prime Video</a>
+            <a href="#" class="nav-essential">Shop Holiday Fashion deals</a>
+        </div>
+    </nav>
+
+    <!-- Sidebar Menu -->
+    <div class="sidebar-backdrop"></div>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <i class="fas fa-user-circle"></i>
+            <span>Hello, sign in</span>
+        </div>
+        <div class="sidebar-content">
+            <div class="sidebar-section">
+                <h3>Digital Content & Devices</h3>
+                <ul>
+                    <li><a href="#">Amazon Music <i class="fas fa-chevron-right"></i></a></li>
+                    <li><a href="#">Kindle E-readers & Books <i class="fas fa-chevron-right"></i></a></li>
+                    <li><a href="#">Amazon Appstore <i class="fas fa-chevron-right"></i></a></li>
+                </ul>
+            </div>
+            <div class="sidebar-section">
+                <h3>Shop By Department</h3>
+                <ul>
+                    <li><a href="#">Electronics <i class="fas fa-chevron-right"></i></a></li>
+                    <li><a href="#">Computers <i class="fas fa-chevron-right"></i></a></li>
+                    <li><a href="#">Smart Home <i class="fas fa-chevron-right"></i></a></li>
+                    <li><a href="#">Arts & Crafts <i class="fas fa-chevron-right"></i></a></li>
+                </ul>
+            </div>
+            <div class="sidebar-section">
+                <h3>Programs & Features</h3>
+                <ul>
+                    <li><a href="#">Gift Cards</a></li>
+                    <li><a href="#">Amazon Live</a></li>
+                    <li><a href="#">International Shopping</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="carousel">
+            <div class="carousel-container">
+                <div class="carousel-slide active">
+                    <img src="https://picsum.photos/1400/600?random=1" alt="Hero Banner 1">
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://picsum.photos/1400/600?random=2" alt="Hero Banner 2">
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://picsum.photos/1400/600?random=3" alt="Hero Banner 3">
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://picsum.photos/1400/600?random=4" alt="Hero Banner 4">
+                </div>
+            </div>
+            
+            <button class="carousel-button prev">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="carousel-button next">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            
+            <div class="carousel-nav">
+                <button class="nav-dot active" data-slide="0"></button>
+                <button class="nav-dot" data-slide="1"></button>
+                <button class="nav-dot" data-slide="2"></button>
+                <button class="nav-dot" data-slide="3"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="products">
+        <div class="product-card">
+            <h2>Sign in for your best experience</h2>
+            <button class="sign-in-button">Sign in securely</button>
+        </div>
+        
+        <div class="product-card">
+            <h2>Holiday Deals</h2>
+            <div class="quad-image-container">
+                <div class="quad-image">
+                    <img src="https://picsum.photos/150/150?random=1" alt="Deal 1">
+                    <span>Up to 30% off</span>
+                </div>
+                <div class="quad-image">
+                    <img src="https://picsum.photos/150/150?random=2" alt="Deal 2">
+                    <span>Up to 40% off</span>
+                </div>
+                <div class="quad-image">
+                    <img src="https://picsum.photos/150/150?random=3" alt="Deal 3">
+                    <span>Up to 25% off</span>
+                </div>
+                <div class="quad-image">
+                    <img src="https://picsum.photos/150/150?random=4" alt="Deal 4">
+                    <span>Up to 35% off</span>
+                </div>
+            </div>
+            <a href="#">See all deals</a>
+        </div>
+
+        <div class="product-card">
+            <h2>Gaming accessories</h2>
+            <div class="quad-image-container">
+                <div class="quad-image">
+                    <img src="https://picsum.photos/150/150?random=5" alt="Headsets">
+                    <span>Headsets</span>
+                </div>
+                <div class="quad-image">
+                    <img src="https://picsum.photos/150/150?random=6" alt="Keyboards">
+                    <span>Keyboards</span>
+                </div>
+                <div class="quad-image">
+                    <img src="https://picsum.photos/150/150?random=7" alt="Mice">
+                    <span>Computer mice</span>
+                </div>
+                <div class="quad-image">
+                    <img src="https://picsum.photos/150/150?random=8" alt="Chairs">
+                    <span>Chairs</span>
+                </div>
+            </div>
+            <a href="#">See more</a>
+        </div>
+
+        <div class="product-card">
+            <h2>Deals in PC</h2>
+            <img src="https://picsum.photos/300/300?random=9" alt="PC Deals" class="single-image">
+            <a href="#">Shop now</a>
+        </div>
+
+        <div class="product-card">
+            <h2>New arrivals in Toys</h2>
+            <img src="https://picsum.photos/300/300?random=10" alt="Toys" class="single-image">
+            <a href="#">Shop now</a>
+        </div>
+
+        <div class="product-card">
+            <h2>For your Fitness Needs</h2>
+            <img src="https://picsum.photos/300/300?random=11" alt="Fitness" class="single-image">
+            <a href="#">Shop Fitness</a>
+        </div>
+
+        <div class="product-card">
+            <h2>Shop activity trackers</h2>
+            <img src="https://picsum.photos/300/300?random=12" alt="Activity Trackers" class="single-image">
+            <a href="#">See more</a>
+        </div>
+
+        <div class="product-card">
+            <h2>Home Refresh Ideas</h2>
+            <img src="https://picsum.photos/300/300?random=13" alt="Home Refresh" class="single-image">
+            <a href="#">Shop kitchen upgrades</a>
+        </div>
+    </section>
+
+    <!-- Recommendation Rows -->
+    <section class="recommendations">
+        <div class="recommendation-row">
+            <h2>Inspired by your shopping trends</h2>
+            <div class="product-scroll">
+                <button class="scroll-button left">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="product-scroll-container">
+                    <div class="scroll-item">
+                        <img src="https://picsum.photos/180/180?random=14" alt="Product 1">
+                        <div class="product-info">
+                            <div class="product-price">
+                                <span class="price-symbol">$</span>
+                                <span class="price-whole">19</span>
+                                <span class="price-fraction">99</span>
+                            </div>
+                            <div class="shipping">Prime FREE Delivery</div>
+                        </div>
+                    </div>
+                    <!-- Repeat scroll items -->
+                    <div class="scroll-item">
+                        <img src="https://picsum.photos/180/180?random=15" alt="Product 2">
+                        <div class="product-info">
+                            <div class="product-price">
+                                <span class="price-symbol">$</span>
+                                <span class="price-whole">24</span>
+                                <span class="price-fraction">99</span>
+                            </div>
+                            <div class="shipping">Prime FREE Delivery</div>
+                        </div>
+                    </div>
+                    <div class="scroll-item">
+                        <img src="https://picsum.photos/180/180?random=16" alt="Product 3">
+                        <div class="product-info">
+                            <div class="product-price">
+                                <span class="price-symbol">$</span>
+                                <span class="price-whole">34</span>
+                                <span class="price-fraction">99</span>
+                            </div>
+                            <div class="shipping">Prime FREE Delivery</div>
+                        </div>
+                    </div>
+                    <div class="scroll-item">
+                        <img src="https://picsum.photos/180/180?random=17" alt="Product 4">
+                        <div class="product-info">
+                            <div class="product-price">
+                                <span class="price-symbol">$</span>
+                                <span class="price-whole">29</span>
+                                <span class="price-fraction">99</span>
+                            </div>
+                            <div class="shipping">Prime FREE Delivery</div>
+                        </div>
+                    </div>
+                    <div class="scroll-item">
+                        <img src="https://picsum.photos/180/180?random=18" alt="Product 5">
+                        <div class="product-info">
+                            <div class="product-price">
+                                <span class="price-symbol">$</span>
+                                <span class="price-whole">44</span>
+                                <span class="price-fraction">99</span>
+                            </div>
+                            <div class="shipping">Prime FREE Delivery</div>
+                        </div>
+                    </div>
+                    <div class="scroll-item">
+                        <img src="https://picsum.photos/180/180?random=19" alt="Product 6">
+                        <div class="product-info">
+                            <div class="product-price">
+                                <span class="price-symbol">$</span>
+                                <span class="price-whole">39</span>
+                                <span class="price-fraction">99</span>
+                            </div>
+                            <div class="shipping">Prime FREE Delivery</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="scroll-button right">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="recommendation-row">
+            <h2>Best Sellers in Electronics</h2>
+            <div class="product-scroll">
+                <button class="scroll-button left">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="product-scroll-container">
+                    <div class="scroll-item">
+                        <img src="https://picsum.photos/180/180?random=20" alt="Electronics 1">
+                        <div class="product-info">
+                            <div class="product-price">
+                                <span class="price-symbol">$</span>
+                                <span class="price-whole">199</span>
+                                <span class="price-fraction">99</span>
+                            </div>
+                            <div class="shipping">Prime FREE Delivery</div>
+                        </div>
+                    </div>
+                    <!-- Repeat scroll items with different images and prices -->
+                    <div class="scroll-item">
+                        <img src="https://picsum.photos/180/180?random=21" alt="Electronics 2">
+                        <div class="product-info">
+                            <div class="product-price">
+                                <span class="price-symbol">$</span>
+                                <span class="price-whole">299</span>
+                                <span class="price-fraction">99</span>
+                            </div>
+                            <div class="shipping">Prime FREE Delivery</div>
+                        </div>
+                    </div>
+                    <div class="scroll-item">
+                        <img src="https://picsum.photos/180/180?random=22" alt="Electronics 3">
+                        <div class="product-info">
+                            <div class="product-price">
+                                <span class="price-symbol">$</span>
+                                <span class="price-whole">159</span>
+                                <span class="price-fraction">99</span>
+                            </div>
+                            <div class="shipping">Prime FREE Delivery</div>
+                        </div>
+                    </div>
+                    <div class="scroll-item">
+                        <img src="https://picsum.photos/180/180?random=23" alt="Electronics 4">
+                        <div class="product-info">
+                            <div class="product-price">
+                                <span class="price-symbol">$</span>
+                                <span class="price-whole">249</span>
+                                <span class="price-fraction">99</span>
+                            </div>
+                            <div class="shipping">Prime FREE Delivery</div>
+                        </div>
+                    </div>
+                    <div class="scroll-item">
+                        <img src="https://picsum.photos/180/180?random=24" alt="Electronics 5">
+                        <div class="product-info">
+                            <div class="product-price">
+                                <span class="price-symbol">$</span>
+                                <span class="price-whole">179</span>
+                                <span class="price-fraction">99</span>
+                            </div>
+                            <div class="shipping">Prime FREE Delivery</div>
+                        </div>
+                    </div>
+                    <div class="scroll-item">
+                        <img src="https://picsum.photos/180/180?random=25" alt="Electronics 6">
+                        <div class="product-info">
+                            <div class="product-price">
+                                <span class="price-symbol">$</span>
+                                <span class="price-whole">399</span>
+                                <span class="price-fraction">99</span>
+                            </div>
+                            <div class="shipping">Prime FREE Delivery</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="scroll-button right">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-top">
+            <button>Back to top</button>
+        </div>
+
+        <div class="footer-main">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Get to Know Us</h3>
+                    <ul>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">About Amazon</a></li>
+                        <li><a href="#">Investor Relations</a></li>
+                        <li><a href="#">Amazon Devices</a></li>
+                        <li><a href="#">Amazon Science</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Make Money with Us</h3>
+                    <ul>
+                        <li><a href="#">Sell products on Amazon</a></li>
+                        <li><a href="#">Sell on Amazon Business</a></li>
+                        <li><a href="#">Sell apps on Amazon</a></li>
+                        <li><a href="#">Become an Affiliate</a></li>
+                        <li><a href="#">Advertise Your Products</a></li>
+                        <li><a href="#">Self-Publish with Us</a></li>
+                        <li><a href="#">Host an Amazon Hub</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Amazon Payment Products</h3>
+                    <ul>
+                        <li><a href="#">Amazon Business Card</a></li>
+                        <li><a href="#">Shop with Points</a></li>
+                        <li><a href="#">Reload Your Balance</a></li>
+                        <li><a href="#">Amazon Currency Converter</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Let Us Help You</h3>
+                    <ul>
+                        <li><a href="#">Amazon and COVID-19</a></li>
+                        <li><a href="#">Your Account</a></li>
+                        <li><a href="#">Your Orders</a></li>
+                        <li><a href="#">Shipping Rates & Policies</a></li>
+                        <li><a href="#">Returns & Replacements</a></li>
+                        <li><a href="#">Manage Your Content and Devices</a></li>
+                        <li><a href="#">Amazon Assistant</a></li>
+                        <li><a href="#">Help</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-divider"></div>
+
+            <div class="footer-secondary">
+                <div class="footer-logo">
+                    <img src="https://picsum.photos/100/30" alt="Amazon Logo">
+                </div>
+                <div class="footer-language-currency">
+                    <button class="footer-button">
+                        <i class="fas fa-globe"></i> English
+                    </button>
+                    <button class="footer-button">
+                        <span>$ USD - U.S. Dollar</span>
+                    </button>
+                    <button class="footer-button">
+                        <i class="fas fa-flag"></i> United States
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-links">
+                <a href="#">Conditions of Use</a>
+                <a href="#">Privacy Notice</a>
+                <a href="#">Your Ads Privacy Choices</a>
+            </div>
+            <div class="footer-copyright">
+                © 1996-2025, Amazon.com, Inc. or its affiliates
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="css/js/script.js"></script>
+</body>
+</html>
